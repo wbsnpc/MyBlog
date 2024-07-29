@@ -10,7 +10,7 @@ keywords:
 author: wbsnpc
 language:  zh-CN
 timezone: ''
-
+  
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://wbsnpc.github.io
@@ -28,7 +28,9 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
+  - ./HTML/**
+  # 表示HTML文件夹里面的所有内容都不会被hexo渲染
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -107,3 +109,4 @@ deploy:
   type: git
   repo: https://github.com/wbsnpc/wbsnpc.github.io.git
   branch: main
+  token: 
