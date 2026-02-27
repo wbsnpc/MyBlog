@@ -1,0 +1,6 @@
+.index-img img {
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #f5f5f5; /* 可选，防止留白难看 */
+}
