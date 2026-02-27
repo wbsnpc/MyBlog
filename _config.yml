@@ -107,6 +107,6 @@ theme: fluid
 
 deploy:
   type: git
-  repo: https://github.com/wbsnpc/wbsnpc.github.io.git
+  repo: git@github.com:wbsnpc/wbsnpc.github.io.git
   branch: main
   token: 
