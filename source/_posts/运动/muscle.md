@@ -36,8 +36,8 @@ categories: 健身
 # 🟫 胸部训练（Chest）
 
 ## 🏋️ 哑铃卧推（平板）
-![哑铃卧推](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-bench-press-front_y8zKZJl.gif)
-![哑铃卧推](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-bench-press-side_rqe1iTe_(1).gif)
+![哑铃卧推](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-bench-press-front_y8zKZJl.gif)
+![哑铃卧推](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-bench-press-side_rqe1iTe_(1).gif)
 
 - 🎯 目标：胸大肌中部  
 - ✅ 要点：
@@ -48,8 +48,8 @@ categories: 健身
 ---
 
 ## 🏋️ 上斜哑铃卧推
-![上斜哑铃卧推](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-incline-bench-press-front_q2q0T12.gif)
-![上斜哑铃卧推](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-incline-bench-press-side_2HBfFN3.gif)
+![上斜哑铃卧推](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-incline-bench-press-front_q2q0T12.gif)
+![上斜哑铃卧推](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-incline-bench-press-side_2HBfFN3.gif)
 
 - 🎯 目标：上胸  
 - ✅ 要点：
@@ -60,8 +60,8 @@ categories: 健身
 ---
 
 ## 🏋️ 哑铃飞鸟
-![哑铃飞鸟](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-chest-fly-front.gif)
-![哑铃飞鸟](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-chest-fly-side.gif)
+![哑铃飞鸟](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-chest-fly-front.gif)
+![哑铃飞鸟](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-chest-fly-side.gif)
 
 - 🎯 目标：胸部拉伸  
 - ✅ 要点：
@@ -72,8 +72,8 @@ categories: 健身
 ---
 
 ## 🏋️ 上斜哑铃飞鸟
-![上斜哑铃飞鸟](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-incline-chest-flys-front.gif)
-![上斜哑铃飞鸟](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-incline-chest-flys-side_em1D4Db.gif)
+![上斜哑铃飞鸟](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-incline-chest-flys-front.gif)
+![上斜哑铃飞鸟](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-incline-chest-flys-side_em1D4Db.gif)
 
 - 🎯 目标：上胸  
 - ✅ 要点：
@@ -85,8 +85,8 @@ categories: 健身
 ---
 
 ## 🏋️ 哑铃窄推（夹胸推）
-![哑铃窄推](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-squeeze-press-front.gif)
-![哑铃窄推](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/male-dumbbell-squeeze-press-side.gif)
+![哑铃窄推](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-squeeze-press-front.gif)
+![哑铃窄推](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/male-dumbbell-squeeze-press-side.gif)
 
 - 🎯 目标：胸中缝 + 三头肌  
 - ✅ 要点：
@@ -99,8 +99,8 @@ categories: 健身
 # 🟦 背部训练（Back）
 
 ## 🏋️ 单侧哑铃划船
-![单侧哑铃划船](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5a6f0c95308a6669.gif)
-![单侧哑铃划船](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-57d0e921983dd544.gif)
+![单侧哑铃划船](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5a6f0c95308a6669.gif)
+![单侧哑铃划船](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-57d0e921983dd544.gif)
 - 🎯 目标：背阔肌  
 - ✅ 要点：
   - 拉向腰部/髋部
@@ -111,8 +111,8 @@ categories: 健身
 ---
 
 ## 🏋️ 跪姿单臂哑铃划船
-![跪姿单臂哑铃划船](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-554f70b495a2fca7.gif)
-![跪姿单臂哑铃划船](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5549b7e49935bf82.gif)
+![跪姿单臂哑铃划船](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-554f70b495a2fca7.gif)
+![跪姿单臂哑铃划船](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5549b7e49935bf82.gif)
 
 - 🎯 目标：背阔肌（更孤立，更稳定）  
 - ✅ 要点：
@@ -126,8 +126,8 @@ categories: 健身
 ---
 
 ## 🏋️ 双手俯身划船
-![双手俯身划船](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5301e2bd7697b92f.gif)
-![双手俯身划船](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5f729d680378d00f%20(1).gif)
+![双手俯身划船](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5301e2bd7697b92f.gif)
+![双手俯身划船](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5f729d680378d00f%20(1).gif)
 - 🎯 目标：整体背部  
 - ✅ 要点：
   - 身体前倾约45°
@@ -140,8 +140,8 @@ categories: 健身
 # 🟩 腿部训练（Legs）
 
 ## 🏋️ 哑铃深蹲
-![哑铃深蹲](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5d82cb4fc887a93f.gif)
-![哑铃深蹲](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-593aab244bfe2e71.gif)
+![哑铃深蹲](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5d82cb4fc887a93f.gif)
+![哑铃深蹲](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-593aab244bfe2e71.gif)
 - 🎯 目标：腿 + 臀  
 - ✅ 要点：
   - 膝盖朝脚尖方向
@@ -152,8 +152,8 @@ categories: 健身
 ---
 
 ## 🏋️ 罗马尼亚硬拉
-![罗马尼亚硬拉](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5b2d6efae791e499.gif)
-![罗马尼亚硬拉](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5ebd2a1c4d2a95e8.gif)
+![罗马尼亚硬拉](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5b2d6efae791e499.gif)
+![罗马尼亚硬拉](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5ebd2a1c4d2a95e8.gif)
 - 🎯 目标：臀 / 腘绳肌  
 - ✅ 要点：
   - 微屈膝
@@ -163,8 +163,8 @@ categories: 健身
 ---
 
 ## 🏋️ 保加利亚分腿蹲
-![保加利亚分腿蹲](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5eeb4648714a10bc.gif)
-![保加利亚分腿蹲](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-51f7190c479c9cdd.gif)
+![保加利亚分腿蹲](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5eeb4648714a10bc.gif)
+![保加利亚分腿蹲](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-51f7190c479c9cdd.gif)
 - 🎯 目标：单腿强化  
 - ✅ 要点：
   - 前脚站稳
@@ -176,8 +176,8 @@ categories: 健身
 # 🟨 肩部训练（Shoulders）
 
 ## 🏋️ 哑铃推肩
-![哑铃推肩](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-55de31a53e0c2796.gif)
-![哑铃推肩](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-585efe1d8f41d778.gif)
+![哑铃推肩](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-55de31a53e0c2796.gif)
+![哑铃推肩](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-585efe1d8f41d778.gif)
 - 🎯 目标：前三角  
 - ✅ 要点：
   - 不锁死手肘
@@ -187,8 +187,8 @@ categories: 健身
 ---
 
 ## 🏋️ 侧平举
-![侧平举](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-20964290057d12dd.gif)
-![侧平举](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-2716662e5b324d2d.gif)
+![侧平举](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-20964290057d12dd.gif)
+![侧平举](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-2716662e5b324d2d.gif)
 - 🎯 目标：中束  
 - ✅ 要点：
   - 小重量
@@ -198,8 +198,8 @@ categories: 健身
 ---
 
 ## 🏋️ 哑铃后束划船
-![哑铃后束划船](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-2d2cc2d0d905ae2d.gif)
-![哑铃后束划船](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-2ea7676862431acc.gif)
+![哑铃后束划船](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-2d2cc2d0d905ae2d.gif)
+![哑铃后束划船](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-2ea7676862431acc.gif)
 - 🎯 目标：后束  
 - ✅ 要点：
   - 背打平
@@ -212,8 +212,8 @@ categories: 健身
 # 🟥 手臂训练（Arms）
 
 ## 🏋️ 二头弯举
-![二头弯举](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5600a8d2cb310714.gif)
-![二头弯举](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5113ab4eded1f0c8.gif)
+![二头弯举](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5600a8d2cb310714.gif)
+![二头弯举](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5113ab4eded1f0c8.gif)
 - 🎯 目标：二头肌  
 - ✅ 要点：
   - 手肘固定
@@ -223,8 +223,8 @@ categories: 健身
 ---
 
 ## 🏋️ 锤式弯举
-![锤式弯举](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5189a57bbe5daa95.gif)
-![锤式弯举](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-5dbbb87fdc6823d1.gif)
+![锤式弯举](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5189a57bbe5daa95.gif)
+![锤式弯举](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-5dbbb87fdc6823d1.gif)
 - 🎯 目标：肱肌 + 前臂  
 - ✅ 要点：
   - 手心相对
@@ -232,8 +232,8 @@ categories: 健身
 
 ---
 ## 🏋️ 哑铃颈后臂屈伸（双手）
-![哑铃颈后臂屈伸](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-51ec66ab42773eda.gif)
-![哑铃颈后臂屈伸](https://cdn.jsdmirror.cn/gh/wbsnpc/pic/img/ezgif-521a2d780d28ee0e.gif)
+![哑铃颈后臂屈伸](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-51ec66ab42773eda.gif)
+![哑铃颈后臂屈伸](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-521a2d780d28ee0e.gif)
 - 🎯 目标：三头肌长头（提升手臂围度）
 - ✅ 要点：
   - 双手握住一个哑铃
