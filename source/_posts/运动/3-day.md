@@ -123,7 +123,9 @@ img_position: top
 
 ---
 
-### 🏋️ 哑铃直臂下拉（模拟高位下拉）
+### 🏋️ 哑铃直臂上拉
+![哑铃直臂上拉](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-252aef9c2edeb33c.gif)
+<!-- ![哑铃直臂上拉](https://cdn.jsdelivr.net/gh/wbsnpc/pic/img/ezgif-2f62c6fa50c933c2.gif) -->
 - 手臂微弯
 - 专注背阔发力
 
