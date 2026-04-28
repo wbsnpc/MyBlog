@@ -1,0 +1,719 @@
+---
+layout: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>等级经验计算器 | 技能书数量(可切换经验/本)</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f0f4fa 0%, #d9e0eb 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 16px;
+            margin: 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(0px);
+            border-radius: 48px 32px 48px 32px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 680px;
+            width: 100%;
+            padding: 28px 30px 38px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255,255,240,0.6);
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin: 0 0 6px 0;
+            background: linear-gradient(135deg, #1f2b3c, #2c3e5c);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .sub {
+            color: #4a627a;
+            border-left: 3px solid #ffb347;
+            padding-left: 14px;
+            margin: 8px 0 20px 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: #fef7e8;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .input-group {
+            margin-bottom: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #1e2f41;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        label i {
+            font-style: normal;
+            font-weight: 700;
+            background: #eef2f9;
+            width: 26px;
+            height: 26px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            font-size: 0.85rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 1rem;
+            border: 2px solid #e2e8f2;
+            border-radius: 28px;
+            background: white;
+            transition: all 0.2s;
+            font-weight: 500;
+            color: #0b2b3d;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #ff9f4a;
+            box-shadow: 0 0 0 3px rgba(255, 159, 74, 0.2);
+        }
+
+        .row-2 {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .row-2 .input-group {
+            flex: 1;
+        }
+
+        .exp-per-book-section {
+            background: #f8f3e8;
+            border-radius: 40px;
+            padding: 12px 20px;
+            margin: 18px 0 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .exp-per-book-label {
+            font-weight: 700;
+            color: #a55117;
+            background: #fff0e0;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 25px;
+            background: white;
+            padding: 5px 20px;
+            border-radius: 60px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #2e4e6e;
+        }
+
+        .radio-group input {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            accent-color: #ff9f4a;
+        }
+
+        button {
+            background: #ff9f4a;
+            border: none;
+            padding: 14px 20px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: white;
+            border-radius: 40px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.2s;
+            margin-top: 8px;
+            box-shadow: 0 5px 0 #c46d1a;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #c46d1a;
+        }
+
+        .result-area {
+            background: #f2f6fc;
+            border-radius: 32px;
+            padding: 20px 24px;
+            margin: 28px 0 15px;
+            border: 1px solid #e9edf4;
+        }
+
+        .result-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            padding: 8px 0;
+            border-bottom: 1px dashed #cddae9;
+        }
+
+        .result-line:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: #2c445e;
+        }
+
+        .result-value {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #1f6392;
+            letter-spacing: 0.5px;
+        }
+
+        .book-highlight {
+            background: #ffeed5;
+            border-radius: 60px;
+            padding: 12px 20px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .book-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #bc6f1e, #fdac53);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .info-note {
+            font-size: 0.75rem;
+            color: #6a7c8f;
+            background: #eef2f7;
+            border-radius: 20px;
+            padding: 8px 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .example-badge {
+            background: #e6f0ff;
+            border-radius: 30px;
+            padding: 5px 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-left: 12px;
+            cursor: pointer;
+            transition: 0.1s;
+            color: #1f6392;
+        }
+
+        .example-badge:hover {
+            background: #d4e2fc;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #6b7c93;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 550px) {
+            .card {
+                padding: 20px 20px 30px;
+            }
+            .result-value {
+                font-size: 1rem;
+            }
+            .radio-group {
+                gap: 12px;
+                padding: 5px 12px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="card">
+            <h1>
+                📘 等级经验计算器
+                <span class="example-badge" id="exampleFillBtn">✨ 填入示例 (70级→80级)</span>
+            </h1>
+            <div class="sub">⚡ 基于累计经验表 | 可切换技能书经验值 (500/本 或 50/本)</div>
+
+            <div class="row-2">
+                <div class="input-group">
+                    <label><i>①</i> 当前等级 (Lv)</label>
+                    <input type="number" id="currentLevel" placeholder="1 ~ 200" value="70" step="1" min="1" max="200">
+                </div>
+                <div class="input-group">
+                    <label><i>📌</i> 当前总经验</label>
+                    <input type="number" id="currentExp" placeholder="累计经验值" value="696948" step="1" min="0">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label><i>🎯</i> 目标等级 (Lv)</label>
+                <input type="number" id="targetLevel" placeholder="1 ~ 200" value="80" step="1" min="1" max="200">
+            </div>
+
+            <!-- 新增：每本技能书经验选择 -->
+            <div class="exp-per-book-section">
+                <span class="exp-per-book-label">📖 每本技能书提供经验</span>
+                <div class="radio-group" id="bookExpRadioGroup">
+                    <label>
+                        <input type="radio" name="bookExp" value="500" checked> 500 经验/本
+                    </label>
+                    <label>
+                        <input type="radio" name="bookExp" value="50"> 50 经验/本
+                    </label>
+                </div>
+            </div>
+
+            <button id="calcBtn">🚀 计算需求技能书</button>
+
+            <div class="result-area" id="resultArea">
+                <div class="result-line">
+                    <span class="result-label">📊 当前等级基准经验</span>
+                    <span class="result-value" id="baseCurrentExp">—</span>
+                </div>
+                <div class="result-line">
+                    <span class="result-label">🎯 目标等级基准经验</span>
+                    <span class="result-value" id="baseTargetExp">—</span>
+                </div>
+                <div class="result-line">
+                    <span class="result-label">➕ 还需经验值</span>
+                    <span class="result-value" id="needExp">—</span>
+                </div>
+                <div class="book-highlight" id="bookHighlight">
+                    <span style="font-weight:600;" id="bookLabelPrefix">📚 需要技能书数量 (每本500经验)</span><br>
+                    <span class="book-number" id="needBooks">—</span>
+                    <span style="font-weight:500;" id="bookUnitNote"> 本 (向上取整)</span>
+                </div>
+            </div>
+            <div class="info-note">
+                💡 * 经验表基于累计值 (1级 0经验 → 200级 1000亿)。<br>
+                ⚠️ 当前总经验不能低于当前等级基准值，目标等级必须高于当前等级。<br>
+                🔄 切换“每本经验”后自动重新计算所需书本数量。
+            </div>
+            <footer>⚙️ 算法依据精确等级累计表 | 支持500/本 或 50/本 技能书</footer>
+        </div>
+
+        <script>
+    // ---------- 根据用户提供的经验表生成累计经验数组 (等级1~200) ----------
+    const expTable = [];
+    
+    expTable[1] = 0;
+    expTable[2] = 33;
+    expTable[3] = 76;
+    expTable[4] = 132;
+    expTable[5] = 202;
+    expTable[6] = 286;
+    expTable[7] = 386;
+    expTable[8] = 503;
+    expTable[9] = 637;
+    expTable[10] = 791;
+    expTable[11] = 964;
+    expTable[12] = 1159;
+    expTable[13] = 1377;
+    expTable[14] = 1620;
+    expTable[15] = 1891;
+    expTable[16] = 2192;
+    expTable[17] = 2525;
+    expTable[18] = 2893;
+    expTable[19] = 3300;
+    expTable[20] = 3750;
+    expTable[21] = 4247;
+    expTable[22] = 4795;
+    expTable[23] = 5400;
+    expTable[24] = 6068;
+    expTable[25] = 6805;
+    expTable[26] = 7618;
+    expTable[27] = 8517;
+    expTable[28] = 9508;
+    expTable[29] = 10604;
+    expTable[30] = 11814;
+    expTable[31] = 13151;
+    expTable[32] = 14629;
+    expTable[33] = 16262;
+    expTable[34] = 18068;
+    expTable[35] = 20064;
+    expTable[36] = 22271;
+    expTable[37] = 24712;
+    expTable[38] = 27411;
+    expTable[39] = 30396;
+    expTable[40] = 33697;
+    expTable[41] = 37346;
+    expTable[42] = 41381;
+    expTable[43] = 45842;
+    expTable[44] = 50773;
+    expTable[45] = 56222;
+    expTable[46] = 62243;
+    expTable[47] = 68895;
+    expTable[48] = 76242;
+    expTable[49] = 84355;
+    expTable[50] = 93311;
+    expTable[51] = 103195;
+    expTable[52] = 114100;
+    expTable[53] = 126127;
+    expTable[54] = 139390;
+    expTable[55] = 154009;
+    expTable[56] = 170118;
+    expTable[57] = 187863;
+    expTable[58] = 207403;
+    expTable[59] = 228914;
+    expTable[60] = 252584;
+    expTable[61] = 278623;
+    expTable[62] = 307256;
+    expTable[63] = 338731;
+    expTable[64] = 373318;
+    expTable[65] = 411311;
+    expTable[66] = 453030;
+    expTable[67] = 498824;
+    expTable[68] = 549074;
+    expTable[69] = 604193;
+    expTable[70] = 664632;
+    expTable[71] = 730881;
+    expTable[72] = 803472;
+    expTable[73] = 882985;
+    expTable[74] = 970050;
+    expTable[75] = 1065351;
+    expTable[76] = 1169633;
+    expTable[77] = 1283701;
+    expTable[78] = 1408433;
+    expTable[79] = 1544780;
+    expTable[80] = 1693774;
+    expTable[81] = 1856536;
+    expTable[82] = 2034279;
+    expTable[83] = 2228321;
+    expTable[84] = 2440088;
+    expTable[85] = 2671127;
+    expTable[86] = 2923113;
+    expTable[87] = 3197861;
+    expTable[88] = 3497335;
+    expTable[89] = 3823663;
+    expTable[90] = 4179145;
+    expTable[91] = 4566274;
+    expTable[92] = 4987741;
+    expTable[93] = 5446463;
+    expTable[94] = 5945587;
+    expTable[95] = 6488521;
+    expTable[96] = 7078945;
+    expTable[97] = 7720834;
+    expTable[98] = 8418485;
+    expTable[99] = 9176537;
+    expTable[100] = 10000000;
+    expTable[101] = 11404976;
+    expTable[102] = 12904567;
+    expTable[103] = 14514400;
+    expTable[104] = 16242080;
+    expTable[105] = 18095702;
+    expTable[106] = 20083886;
+    expTable[107] = 22215808;
+    expTable[108] = 24501230;
+    expTable[109] = 26950540;
+    expTable[110] = 29574787;
+    expTable[111] = 32385721;
+    expTable[112] = 35395838;
+    expTable[113] = 38618420;
+    expTable[114] = 42067584;
+    expTable[115] = 45758332;
+    expTable[116] = 49706603;
+    expTable[117] = 53929328;
+    expTable[118] = 58444489;
+    expTable[119] = 63271179;
+    expTable[120] = 68429670;
+    expTable[121] = 73941479;
+    expTable[122] = 79829440;
+    expTable[123] = 86117783;
+    expTable[124] = 92832214;
+    expTable[125] = 100000000;
+    expTable[126] = 114406130;
+    expTable[127] = 130118394;
+    expTable[128] = 147319656;
+    expTable[129] = 166147618;
+    expTable[130] = 186752428;
+    expTable[131] = 209297771;
+    expTable[132] = 233962072;
+    expTable[133] = 260939787;
+    expTable[134] = 290442814;
+    expTable[135] = 322702028;
+    expTable[136] = 357968938;
+    expTable[137] = 396517495;
+    expTable[138] = 438646053;
+    expTable[139] = 484679494;
+    expTable[140] = 534971538;
+    expTable[141] = 589907252;
+    expTable[142] = 649905763;
+    expTable[143] = 715423218;
+    expTable[144] = 786955977;
+    expTable[145] = 865044093;
+    expTable[146] = 950275074;
+    expTable[147] = 1043287971;
+    expTable[148] = 1144777804;
+    expTable[149] = 1255500373;
+    expTable[150] = 1376277458;
+    expTable[151] = 1508002470;
+    expTable[152] = 1651646566;
+    expTable[153] = 1808265285;
+    expTable[154] = 1979005730;
+    expTable[155] = 2165114358;
+    expTable[156] = 2367945418;
+    expTable[157] = 2588970089;
+    expTable[158] = 2829786381;
+    expTable[159] = 3092129857;
+    expTable[160] = 3377885250;
+    expTable[161] = 3689099031;
+    expTable[162] = 4027993033;
+    expTable[163] = 4396979184;
+    expTable[164] = 4798675471;
+    expTable[165] = 5235923207;
+    expTable[166] = 5711805728;
+    expTable[167] = 6229668624;
+    expTable[168] = 6793141628;
+    expTable[169] = 7406162301;
+    expTable[170] = 8073001662;
+    expTable[171] = 8798291902;
+    expTable[172] = 9587056372;
+    expTable[173] = 10444742007;
+    expTable[174] = 11377254401;
+    expTable[175] = 12390995728;
+    expTable[176] = 13492905745;
+    expTable[177] = 14690506120;
+    expTable[178] = 15991948361;
+    expTable[179] = 17406065609;
+    expTable[180] = 18942428633;
+    expTable[181] = 20611406335;
+    expTable[182] = 22424231139;
+    expTable[183] = 24393069640;
+    expTable[184] = 26531098945;
+    expTable[185] = 28852589138;
+    expTable[186] = 31372992363;
+    expTable[187] = 34109039054;
+    expTable[188] = 37078841860;
+    expTable[189] = 40302007875;
+    expTable[190] = 43799759843;
+    expTable[191] = 47595067021;
+    expTable[192] = 51712786465;
+    expTable[193] = 56179815564;
+    expTable[194] = 61025256696;
+    expTable[195] = 66280594953;
+    expTable[196] = 71979889960;
+    expTable[197] = 78159982881;
+    expTable[198] = 84860719814;
+    expTable[199] = 92125192822;
+    expTable[200] = 100000000000;
+    
+    // 补全安全
+    for (let i = 1; i <= 200; i++) {
+        if (expTable[i] === undefined) {
+            expTable[i] = expTable[i-1] + (expTable[i-1] - expTable[i-2] || 0);
+        }
+    }
+
+    // DOM 元素
+    const currentLevelInput = document.getElementById('currentLevel');
+    const currentExpInput = document.getElementById('currentExp');
+    const targetLevelInput = document.getElementById('targetLevel');
+    const calcBtn = document.getElementById('calcBtn');
+    const baseCurrentExpSpan = document.getElementById('baseCurrentExp');
+    const baseTargetExpSpan = document.getElementById('baseTargetExp');
+    const needExpSpan = document.getElementById('needExp');
+    const needBooksSpan = document.getElementById('needBooks');
+    const bookLabelPrefix = document.getElementById('bookLabelPrefix');
+    const bookUnitNote = document.getElementById('bookUnitNote');
+    const radioButtons = document.querySelectorAll('input[name="bookExp"]');
+    
+    // 获取当前选中的每本经验值
+    function getCurrentBookExp() {
+        let selectedVal = 500;
+        for (let radio of radioButtons) {
+            if (radio.checked) {
+                selectedVal = parseInt(radio.value, 10);
+                break;
+            }
+        }
+        return selectedVal;
+    }
+    
+    // 更新UI中书本单位的文字描述
+    function updateBookExpLabel() {
+        const bookExp = getCurrentBookExp();
+        bookLabelPrefix.innerText = `📚 需要技能书数量 (每本${bookExp}经验)`;
+        // 可保留原单位提示
+    }
+    
+    // 辅助：格式化数字加千位分隔符
+    function formatNumber(num) {
+        if (num === undefined || num === null) return '—';
+        return num.toLocaleString('en-US');
+    }
+    
+    // 验证并获取有效等级
+    function getValidLevel(levelVal) {
+        let level = parseInt(levelVal, 10);
+        if (isNaN(level)) return null;
+        if (level < 1) level = 1;
+        if (level > 200) level = 200;
+        return level;
+    }
+    
+    // 核心计算并更新UI
+    function calculate() {
+        // 获取等级
+        let curLvl = getValidLevel(currentLevelInput.value);
+        let tgtLvl = getValidLevel(targetLevelInput.value);
+        if (curLvl === null || tgtLvl === null) {
+            alert('请输入有效的等级 (1-200)');
+            return;
+        }
+        
+        // 当前总经验
+        let curExpRaw = parseFloat(currentExpInput.value);
+        if (isNaN(curExpRaw) || curExpRaw < 0) {
+            alert('请输入有效的当前总经验 (≥0)');
+            return;
+        }
+        let curExp = Math.floor(curExpRaw);
+        
+        // 基准经验
+        let baseCur = expTable[curLvl];
+        let baseTgt = expTable[tgtLvl];
+        if (baseCur === undefined || baseTgt === undefined) {
+            alert('等级超出经验表范围 (1~200)');
+            return;
+        }
+        
+        // 检查当前经验是否小于当前等级基准经验
+        if (curExp < baseCur) {
+            alert(`⚠️ 当前总经验 (${formatNumber(curExp)}) 低于 Lv${curLvl} 所需最低基准经验 ${formatNumber(baseCur)}。\n请调整当前经验或等级。`);
+            return;
+        }
+        
+        if (tgtLvl <= curLvl) {
+            alert(`目标等级 (${tgtLvl}) 必须大于当前等级 (${curLvl})，无法计算升级需求。`);
+            return;
+        }
+        
+        // 还需经验
+        let needExpValue = baseTgt - curExp;
+        if (needExpValue <= 0) {
+            needExpSpan.innerText = '0 (已达成目标)';
+            needBooksSpan.innerText = '0';
+            baseCurrentExpSpan.innerText = formatNumber(baseCur);
+            baseTargetExpSpan.innerText = formatNumber(baseTgt);
+            updateBookExpLabel(); // 确保标签正确但书本已经是0
+            return;
+        }
+        
+        // 获取技能书每本经验
+        const bookExp = getCurrentBookExp();
+        let booksNeeded = Math.ceil(needExpValue / bookExp);
+        
+        // 显示结果
+        baseCurrentExpSpan.innerText = formatNumber(baseCur);
+        baseTargetExpSpan.innerText = formatNumber(baseTgt);
+        needExpSpan.innerText = formatNumber(needExpValue);
+        needBooksSpan.innerText = formatNumber(booksNeeded);
+        
+        // 更新技能书标签文字（显示当前每本经验）
+        updateBookExpLabel();
+    }
+    
+    // 监听单选按钮变化，自动重新计算
+    function bindRadioEvents() {
+        for (let radio of radioButtons) {
+            radio.addEventListener('change', () => {
+                calculate();
+            });
+        }
+    }
+    
+    // 示例填充 (70级 696948经验 升80级 → 默认500/本需1994本，50/本则19940本)
+    function fillExample() {
+        currentLevelInput.value = '70';
+        currentExpInput.value = '696948';
+        targetLevelInput.value = '80';
+        // 可选: 确保合适，默认保持500选中（但不强制更改用户之前的选项）; 如果想展示同时切换无所谓
+        // 但是为了示例效果，清除可能错误，无需改动。
+        calculate();
+    }
+    
+    // 绑定计算事件
+    calcBtn.addEventListener('click', () => {
+        calculate();
+    });
+    
+    // 输入框回车计算
+    const inputs = [currentLevelInput, currentExpInput, targetLevelInput];
+    inputs.forEach(inp => {
+        inp.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') calculate();
+        });
+    });
+    
+    // 示例按钮绑定
+    const exampleBtn = document.getElementById('exampleFillBtn');
+    exampleBtn.addEventListener('click', fillExample);
+    
+    // 页面加载初始化
+    window.addEventListener('DOMContentLoaded', () => {
+        bindRadioEvents();
+        calculate();
+    });
+</script>
+    </body>
+</html>
